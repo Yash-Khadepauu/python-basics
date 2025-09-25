@@ -34,9 +34,11 @@ def view_tasks(tasks):
     if len(tasks) == 0:
         print("No tasks added yet.")
     else:
-        print("\nYour Tasks:")
+        count = 1
+        print(tasks)
         for task in tasks:
-            print(task)
+            print(count, ". ", task)
+            count += 1
     pass
 
 def main():
