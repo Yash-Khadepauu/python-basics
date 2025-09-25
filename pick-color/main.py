@@ -4,16 +4,20 @@
 import random
 
 def get_random_color():
-    # TODO: Return a random color from the list
     colors = ["Red", "Green", "Blue", "Yellow", "Purple", "Orange"]
+    return random.choice(colors)
     pass
 
 def main():
     print("Random Color Picker")
 
-    while True:
-        input("Press Enter to pick a color (or Ctrl+C to quit)...")
-        # Call the random color function and display the result
+    try:
+        while True:
+            input("Press Enter to pick a color (or Ctrl+C to quit)...")
+            color = get_random_color()
+            print("Your color is: ", color)
+    except KeyboardInterrupt:
+        print("\nStopped.")
 
 if __name__ == "__main__":
     main()

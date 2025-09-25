@@ -2,20 +2,22 @@
 # Performs basic arithmetic operations based on user input
 
 def add(a, b):
-    # TODO: Return sum of a and b
+    return a + b
     pass
 
 def subtract(a, b):
-    # TODO: Return difference of a and b
+    return a - b
     pass
 
 def multiply(a, b):
-    # TODO: Return product of a and b
+    return a * b
     pass
 
 def divide(a, b):
-    # TODO: Return quotient of a and b
-    # Handle division by zero
+    if b == 0:
+        return "Error: division by 0"
+    else:
+        return a/b
     pass
 
 def main():
@@ -27,7 +29,18 @@ def main():
         operator = input("Enter operator: ")
         num2 = float(input("Enter second number: "))
 
-        # Match the operator with the correct function
+        if operator == "+":
+            answer = add(num1, num2)
+        elif operator == "-":
+            answer = subtract(num1, num2)
+        elif operator == "*":
+            answer = multiply(num1, num2)
+        elif operator == "/":
+            answer = divide(num1, num2)
+        else:
+            answer = "Error: invalid operator"
+
+        print("Answer: ", answer)
 
     except ValueError:
         print("Invalid number entered.")

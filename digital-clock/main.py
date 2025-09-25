@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 
 def get_current_time():
-    # TODO: Return the current system time in formatted string
+    return datetime.now().strftime("%H:%M:%S")
     pass
 
 def main():
@@ -13,8 +13,9 @@ def main():
     
     try:
         while True:
-            # Get current time and display it
-            # Use time.sleep(1) to update every second
+            current_time = get_current_time()
+            print("\r" + current_time, end="")
+            time.sleep(1)
             pass
     except KeyboardInterrupt:
         print("\nClock stopped.")

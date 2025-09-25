@@ -9,15 +9,34 @@ def show_menu():
     print("4. Exit")
 
 def add_task(tasks):
-    # TODO: Ask user for a task and append to the list
+    task = input("Enter a new task: ")
+    tasks.append(task)
+    print("Task added.")
     pass
 
 def remove_task(tasks):
-    # TODO: Show task list and allow user to remove by index
+    if len(tasks) == 0:
+        print("No tasks to remove.")
+        pass
+    view_tasks(tasks)
+    try:
+        index = int(input("Enter the task number to remove: "))
+        if 1 <= index <= len(tasks):
+            tasks.pop(index - 1)
+            print("Task removed.")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Error: please enter a valid number")
     pass
 
 def view_tasks(tasks):
-    # TODO: Display current list of tasks
+    if len(tasks) == 0:
+        print("No tasks added yet.")
+    else:
+        print("\nYour Tasks:")
+        for task in tasks:
+            print(task)
     pass
 
 def main():

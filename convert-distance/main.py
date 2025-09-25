@@ -2,15 +2,18 @@
 # Convert between kilometers, meters, and centimeters
 
 def km_to_m(km):
-    # TODO: Convert kilometers to meters
+    m = km * 1000
+    print("km = ", m, "m")
     pass
 
 def m_to_cm(m):
-    # TODO: Convert meters to centimeters
+    cm = m * 100
+    print("m = ", cm, "cm")
     pass
 
 def cm_to_km(cm):
-    # TODO: Convert centimeters to kilometers
+    km = cm / 100000
+    print("cm = ", km, "km")
     pass
 
 def main():
@@ -24,13 +27,13 @@ def main():
 
     if choice == "1":
         km = float(input("Enter distance in kilometers: "))
-        # Call conversion function
+        km_to_m(km)
     elif choice == "2":
         m = float(input("Enter distance in meters: "))
-        # Call conversion function
+        m_to_cm(m)
     elif choice == "3":
         cm = float(input("Enter distance in centimeters: "))
-        # Call conversion function
+        cm_to_km(cm)
     else:
         print("Invalid choice!")
 
