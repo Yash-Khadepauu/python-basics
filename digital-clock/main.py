@@ -9,7 +9,7 @@ def get_current_time():
     pass
 
 def main():
-    print("Digital Clock - Press Ctrl+C to stop\n")
+    print("Digital Clock - Press Ctrl+C to stop")
     
     try:
         while True:

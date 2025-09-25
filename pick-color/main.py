@@ -17,7 +17,7 @@ def main():
             color = get_random_color()
             print("Your color is: ", color)
     except KeyboardInterrupt:
-        print("\nStopped.")
+        print("Stopped.")
 
 if __name__ == "__main__":
     main()
